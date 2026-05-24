@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/app_image.dart';
+import 'package:flutter_application_4/core/images/app_image.dart';
+import 'package:flutter_application_4/page/login_page.dart';
+import 'package:flutter_application_4/page/profile.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -8,10 +10,16 @@ class Signup extends StatefulWidget {
   State<Signup> createState() => _SignupState();
 }
 
-bool isHidden = true;
-
 class _SignupState extends State<Signup> {
   final formKey = GlobalKey<FormState>();
+
+  bool isHidden = true;
+
+  final TextEditingController userNameController = TextEditingController();
+
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +37,26 @@ class _SignupState extends State<Signup> {
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                const SizedBox(height: 80),
+                const SizedBox(height: 40),
+
+                IconButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      ),
+                    );
+                  },
+
+                  icon: const Icon(Icons.arrow_back_ios),
+                ),
+
+                const SizedBox(height: 20),
 
                 Center(child: Image.asset(AppImage.carrot)),
 
-                const SizedBox(height: 120),
+                const SizedBox(height: 100),
 
                 const Text(
                   "Signup",
@@ -60,6 +83,8 @@ class _SignupState extends State<Signup> {
                 const SizedBox(height: 5),
 
                 TextFormField(
+                  controller: userNameController,
+
                   decoration: InputDecoration(
                     hintText: "Enter your user name",
 
@@ -100,6 +125,8 @@ class _SignupState extends State<Signup> {
                 const SizedBox(height: 5),
 
                 TextFormField(
+                  controller: emailController,
+
                   keyboardType: TextInputType.emailAddress,
 
                   decoration: InputDecoration(
@@ -146,6 +173,8 @@ class _SignupState extends State<Signup> {
                 const SizedBox(height: 12),
 
                 TextFormField(
+                  controller: passwordController,
+
                   obscureText: isHidden,
 
                   keyboardType: TextInputType.visiblePassword,
@@ -231,8 +260,15 @@ class _SignupState extends State<Signup> {
                 ElevatedButton(
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text("Signup Successfully")),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Profile(
+                            userName: userNameController.text,
+
+                            email: emailController.text,
+                          ),
+                        ),
                       );
                     }
                   },
