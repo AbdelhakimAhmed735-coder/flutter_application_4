@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_4/app_image.dart';
+
+import 'login_page.dart';
+
+class Onbording extends StatelessWidget {
+  const Onbording({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset(AppImage.onbording),
+          Center(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 485),
+                  child: Image.asset(AppImage.group),
+                ),
+                Text(
+                  "   Welcome \n to our store",
+                  style: TextStyle(
+                    fontSize: 48,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0XFFFFFFFF),
+                  ),
+                ),
+                Text(
+                  "Get your groceries in as fast as one hour",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0XFFFFFFFF),
+                  ),
+                ),
+                SizedBox(height: 18),
+                ElevatedButton(
+                  onPressed: () {
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0Xff53B175),
+                    foregroundColor: Color(0XFFFFF9FF),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(500),
+                    ),
+                    fixedSize: Size(353, 67),
+                  ),
+                  child: Text("Get Start", style: TextStyle(fontSize: 30)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
