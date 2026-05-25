@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/core/color/appcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
-import 'package:flutter_application_4/page/login_page.dart';
+import 'package:flutter_application_4/page/auth/login_page.dart';
 import 'package:flutter_application_4/page/profile.dart';
 
 class Signup extends StatefulWidget {
@@ -274,9 +275,9 @@ class _SignupState extends State<Signup> {
                   },
 
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0Xff53B175),
+                    backgroundColor: Appcolor.bottombackgroundColor,
 
-                    foregroundColor: const Color(0XFFFFF9FF),
+                    foregroundColor: Appcolor.bottomforegroundColor,
 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(500),
@@ -292,7 +293,7 @@ class _SignupState extends State<Signup> {
 
                 Center(
                   child: RichText(
-                    text: const TextSpan(
+                    text: TextSpan(
                       children: [
                         TextSpan(
                           text: "Don't have an account? ",
@@ -302,7 +303,7 @@ class _SignupState extends State<Signup> {
                         TextSpan(
                           text: "Sign Up",
                           style: TextStyle(
-                            color: Color(0Xff53B175),
+                            color: Appcolor.bottombackgroundColor,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),

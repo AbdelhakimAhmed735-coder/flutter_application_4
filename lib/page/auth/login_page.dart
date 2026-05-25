@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/core/color/appcolor.dart';
+import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
-import 'package:flutter_application_4/page/signup.dart';
+import 'package:flutter_application_4/page/auth/signup.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -63,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                 prefixIcon: Icon(Icons.email),
 
                 filled: true,
-                fillColor: Colors.white,
+                fillColor: Textcolor.primary,
 
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -113,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 filled: true,
-                fillColor: Colors.white,
+                fillColor: Textcolor.primary,
 
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -149,8 +151,8 @@ class _LoginPageState extends State<LoginPage> {
                 }
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0Xff53B175),
-                foregroundColor: Color(0XFFFFF9FF),
+                backgroundColor: Appcolor.bottombackgroundColor,
+                foregroundColor: Appcolor.bottomforegroundColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusGeometry.circular(500),
                 ),
@@ -171,7 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextSpan(
                       text: "Sign Up",
                       style: TextStyle(
-                        color: Color(0Xff53B175),
+                        color: Appcolor.bottombackgroundColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),

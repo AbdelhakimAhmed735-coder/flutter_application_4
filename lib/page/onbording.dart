@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/core/color/appcolor.dart';
+import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
-
-import 'login_page.dart';
+import 'package:flutter_application_4/page/auth/login_page.dart';
 
 class Onbording extends StatelessWidget {
   const Onbording({super.key});
@@ -24,7 +25,7 @@ class Onbording extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 48,
                     fontWeight: FontWeight.w600,
-                    color: Color(0XFFFFFFFF),
+                    color: Textcolor.primary,
                   ),
                 ),
                 Text(
@@ -32,7 +33,7 @@ class Onbording extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
-                    color: Color(0XFFFFFFFF),
+                    color: Textcolor.primary,
                   ),
                 ),
                 SizedBox(height: 18),
@@ -46,8 +47,8 @@ class Onbording extends StatelessWidget {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0Xff53B175),
-                    foregroundColor: Color(0XFFFFF9FF),
+                    backgroundColor: Appcolor.bottombackgroundColor,
+                    foregroundColor: Appcolor.bottomforegroundColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadiusGeometry.circular(500),
                     ),
