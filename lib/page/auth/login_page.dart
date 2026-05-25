@@ -1,8 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/core/color/appcolor.dart';
 import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
 import 'package:flutter_application_4/page/auth/signup.dart';
+import 'package:flutter_application_4/page/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -146,7 +148,9 @@ class _LoginPageState extends State<LoginPage> {
                 {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Signup()),
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(userName: '', email: ''),
+                    ),
                   );
                 }
               },
@@ -165,18 +169,29 @@ class _LoginPageState extends State<LoginPage> {
               child: RichText(
                 text: TextSpan(
                   children: [
-                    TextSpan(
+                    const TextSpan(
                       text: "Don't have an account? ",
                       style: TextStyle(color: Colors.black, fontSize: 16),
                     ),
 
                     TextSpan(
                       text: "Sign Up",
+
                       style: TextStyle(
                         color: Appcolor.bottombackgroundColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
+
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Signup(),
+                            ),
+                          );
+                        },
                     ),
                   ],
                 ),

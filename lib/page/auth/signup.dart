@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/core/color/appcolor.dart';
+import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
 import 'package:flutter_application_4/page/auth/login_page.dart';
-import 'package:flutter_application_4/page/profile.dart';
+import 'package:flutter_application_4/page/home_page.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -198,7 +199,7 @@ class _SignupState extends State<Signup> {
                     ),
 
                     filled: true,
-                    fillColor: Colors.white,
+                    fillColor: Textcolor.primary,
 
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -264,7 +265,7 @@ class _SignupState extends State<Signup> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Profile(
+                          builder: (context) => HomePage(
                             userName: userNameController.text,
 
                             email: emailController.text,
