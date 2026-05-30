@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_4/core/color/appcolor.dart';
 import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
-import 'package:flutter_application_4/page/auth/login_page.dart';
+import 'package:flutter_application_4/features/auth/login_page.dart';
 
 class Onbording extends StatelessWidget {
   const Onbording({super.key});

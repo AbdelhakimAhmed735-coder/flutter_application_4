@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_4/core/color/appcolor.dart';
 import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
-import 'package:flutter_application_4/page/auth/login_page.dart';
-import 'package:flutter_application_4/page/navigation/bottom_nav_bar.dart';
+import 'package:flutter_application_4/features/auth/login_page.dart';
+import 'package:flutter_application_4/bottom_nav_bar.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -26,7 +26,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(251, 246, 246, 245),
+      backgroundColor: const Color.fromARGB(250, 227, 9, 176),
 
       body: Padding(
         padding: const EdgeInsets.all(30),

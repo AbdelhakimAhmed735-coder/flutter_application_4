@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/page/navigation/cart_Page.dart';
-import 'package:flutter_application_4/page/navigation/explore.dart';
-import 'package:flutter_application_4/page/navigation/favorite_Page.dart';
-import 'package:flutter_application_4/page/navigation/home_Page.dart';
-import 'package:flutter_application_4/page/navigation/profile.dart';
+import 'package:flutter_application_4/features/cart/cart_Page.dart';
+import 'package:flutter_application_4/features/explore/explore.dart';
+import 'package:flutter_application_4/features/favorite/favorite_Page.dart';
+import 'package:flutter_application_4/features/home/home_Page.dart';
+import 'package:flutter_application_4/features/profilen/profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.userName, required this.email});

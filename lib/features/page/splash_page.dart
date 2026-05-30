@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_application_4/core/images/app_image.dart';
-import 'package:flutter_application_4/page/onbording.dart';
+import 'package:flutter_application_4/features/page/onbording.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
