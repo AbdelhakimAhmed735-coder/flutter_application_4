@@ -4,7 +4,7 @@ import 'package:flutter_application_4/core/color/appcolor.dart';
 import 'package:flutter_application_4/core/color/textcolor.dart';
 import 'package:flutter_application_4/core/images/app_image.dart';
 import 'package:flutter_application_4/page/auth/signup.dart';
-import 'package:flutter_application_4/page/home_page.dart';
+import 'package:flutter_application_4/page/navigation/bottom_nav_bar.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
